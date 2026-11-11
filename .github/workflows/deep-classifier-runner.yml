@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Actions
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
         with:
           repository: "microsoft/vscode-github-triage-actions"
           ref: stable
@@ -32,7 +32,7 @@ jobs:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
       - name: Set up Python 3.7
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@0f07f7f756721ebd886c2462646a35f78a8bc4de # v1.2.4
         with:
           python-version: 3.7
       - name: Install dependencies
